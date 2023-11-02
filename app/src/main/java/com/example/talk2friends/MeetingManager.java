@@ -28,7 +28,7 @@ public class MeetingManager {
         private List<String> registeredUsers;
 
 
-        public Meeting(String meetingLink, String topic, String time, String location) {
+        public Meeting(String meetingLink, String topic, String time, String location)  {
             this.meetingLink = meetingLink;
             this.topic = topic;
             this.time = time;
@@ -66,6 +66,10 @@ public class MeetingManager {
 
         public void registerUser(String userName) {
             registeredUsers.add(userName);
+        }
+
+        public void setRegisteredUsers(List<String> registeredUsers) {
+            this.registeredUsers = registeredUsers;
         }
     }
 }
