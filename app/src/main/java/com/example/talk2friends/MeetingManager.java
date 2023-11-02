@@ -1,5 +1,6 @@
 package com.example.talk2friends;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +20,7 @@ public class MeetingManager {
         return meetings;
     }
 
-    public static class Meeting {
+    public static class Meeting implements Serializable {
         private String meetingLink;
         private String topic;
         private String time;
@@ -46,6 +47,14 @@ public class MeetingManager {
 
         public String getLocation() {
             return location;
+        }
+
+        @Override
+        public String toString() {
+            return "Topic: " + topic + "\n" +
+                    "Time: " + time + "\n" +
+                    "Location: " + location + "\n" +
+                    "Meeting Link: " + meetingLink;
         }
     }
 }
