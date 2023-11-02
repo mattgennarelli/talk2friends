@@ -25,12 +25,15 @@ public class MeetingManager {
         private String topic;
         private String time;
         private String location;
+        private List<String> registeredUsers;
+
 
         public Meeting(String meetingLink, String topic, String time, String location) {
             this.meetingLink = meetingLink;
             this.topic = topic;
             this.time = time;
             this.location = location;
+            this.registeredUsers = new ArrayList<>();
         }
 
         public String getMeetingLink() {
@@ -55,6 +58,14 @@ public class MeetingManager {
                     "Time: " + time + "\n" +
                     "Location: " + location + "\n" +
                     "Meeting Link: " + meetingLink;
+        }
+
+        public List<String> getRegisteredUsers() {
+            return registeredUsers;
+        }
+
+        public void registerUser(String userName) {
+            registeredUsers.add(userName);
         }
     }
 }

@@ -35,4 +35,31 @@
         android:autoLink="web"
         android:layout_marginBottom="8dp" />
 
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register for Meeting"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:onClick="registerForMeeting" />
+
+    <TextView
+        android:id="@+id/participantsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Participants"
+        android:textSize="20sp"
+        android:layout_below="@id/registerButton"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/registeredUsersTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_below="@id/participantsTextView"
+        android:layout_marginTop="8dp" />
+
+
 </LinearLayout>
